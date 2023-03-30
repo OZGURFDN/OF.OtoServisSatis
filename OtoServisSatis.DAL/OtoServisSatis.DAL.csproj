@@ -52,11 +52,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseContext.cs" />
+    <Compile Include="Migrations\202303301804036_dbkurulus.cs" />
+    <Compile Include="Migrations\202303301804036_dbkurulus.designer.cs">
+      <DependentUpon>202303301804036_dbkurulus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OtoServisSatis.Entities\OtoServisSatis.Entities.csproj">
+      <Project>{F13B9214-1D79-4DA9-B37F-FF8D1525CFD7}</Project>
+      <Name>OtoServisSatis.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202303301804036_dbkurulus.resx">
+      <DependentUpon>202303301804036_dbkurulus.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
