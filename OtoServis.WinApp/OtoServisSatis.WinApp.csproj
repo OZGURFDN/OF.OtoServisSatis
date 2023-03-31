@@ -87,6 +87,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OtoServisSati.BL\OtoServisSati.BL.csproj">
+      <Project>{1f1e86b1-f47a-4fb6-ab4c-c30653b9e9ed}</Project>
+      <Name>OtoServisSati.BL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
