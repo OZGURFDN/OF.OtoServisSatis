@@ -17,10 +17,7 @@ namespace OtoServis.WinApp
             InitializeComponent();
         }
 
-        private void dgvMarkalar_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
 
         private void MarkaYonetimi_Load(object sender, System.EventArgs e)
         {
