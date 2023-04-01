@@ -58,6 +58,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IRepsitory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -74,6 +75,7 @@
       <DependentUpon>202303301804036_dbkurulus.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
