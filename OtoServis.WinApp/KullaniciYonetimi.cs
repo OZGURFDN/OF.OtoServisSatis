@@ -1,8 +1,7 @@
-﻿using System;
-using System.Windows.Forms;
-using DevExpress.XtraEditors.Design;
-using OtoServisSati.BL;
+﻿using OtoServisSati.BL;
 using OtoServisSatis.Entities;
+using System;
+using System.Windows.Forms;
 
 namespace OtoServis.WinApp
 {
