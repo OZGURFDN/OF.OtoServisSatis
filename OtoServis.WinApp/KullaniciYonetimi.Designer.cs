@@ -28,54 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvKullanicilar = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblId = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.btnSil = new System.Windows.Forms.Button();
+            this.btnGuncelle = new System.Windows.Forms.Button();
+            this.btnEkle = new System.Windows.Forms.Button();
+            this.cbAktif = new System.Windows.Forms.CheckBox();
+            this.txtSifre = new System.Windows.Forms.TextBox();
+            this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
+            this.txtTelefon = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtSoyadi = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.lblEklenmeTarihi = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtAdi = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
+            this.cmbKullaniciRolu = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKullanicilar)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvKullanicilar
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(929, 198);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvKullanicilar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvKullanicilar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKullanicilar.Location = new System.Drawing.Point(3, 4);
+            this.dgvKullanicilar.Name = "dgvKullanicilar";
+            this.dgvKullanicilar.RowHeadersWidth = 51;
+            this.dgvKullanicilar.RowTemplate.Height = 24;
+            this.dgvKullanicilar.Size = new System.Drawing.Size(810, 198);
+            this.dgvKullanicilar.TabIndex = 0;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBoxEdit1);
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.cmbKullaniciRolu);
+            this.groupBox1.Controls.Add(this.btnSil);
+            this.groupBox1.Controls.Add(this.btnGuncelle);
+            this.groupBox1.Controls.Add(this.btnEkle);
+            this.groupBox1.Controls.Add(this.cbAktif);
+            this.groupBox1.Controls.Add(this.txtSifre);
+            this.groupBox1.Controls.Add(this.txtKullaniciAdi);
+            this.groupBox1.Controls.Add(this.txtTelefon);
+            this.groupBox1.Controls.Add(this.txtEmail);
+            this.groupBox1.Controls.Add(this.txtSoyadi);
             this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.lblEklenmeTarihi);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtAdi);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -85,102 +91,120 @@
             this.groupBox1.Controls.Add(this.lblId);
             this.groupBox1.Location = new System.Drawing.Point(3, 209);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(929, 239);
+            this.groupBox1.Size = new System.Drawing.Size(810, 225);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kullanıcı Bilgileri";
             // 
-            // textBox1
+            // btnSil
             // 
-            this.textBox1.Location = new System.Drawing.Point(90, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(170, 22);
-            this.textBox1.TabIndex = 1;
+            this.btnSil.Location = new System.Drawing.Point(427, 186);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(75, 23);
+            this.btnSil.TabIndex = 4;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = true;
             // 
-            // lblId
+            // btnGuncelle
             // 
-            this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(909, 18);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(14, 16);
-            this.lblId.TabIndex = 0;
-            this.lblId.Text = "0";
+            this.btnGuncelle.Location = new System.Drawing.Point(327, 186);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(75, 23);
+            this.btnGuncelle.TabIndex = 4;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // btnEkle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Adı";
+            this.btnEkle.Location = new System.Drawing.Point(233, 186);
+            this.btnEkle.Name = "btnEkle";
+            this.btnEkle.Size = new System.Drawing.Size(75, 23);
+            this.btnEkle.TabIndex = 4;
+            this.btnEkle.Text = "Ekle";
+            this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
-            // label2
+            // cbAktif
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 70);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Soyadı";
+            this.cbAktif.AutoSize = true;
+            this.cbAktif.Location = new System.Drawing.Point(604, 111);
+            this.cbAktif.Name = "cbAktif";
+            this.cbAktif.Size = new System.Drawing.Size(71, 20);
+            this.cbAktif.TabIndex = 2;
+            this.cbAktif.Text = "Aktif mi";
+            this.cbAktif.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // txtSifre
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 109);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 16);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Email";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.txtSifre.Location = new System.Drawing.Point(402, 76);
+            this.txtSifre.Name = "txtSifre";
+            this.txtSifre.Size = new System.Drawing.Size(170, 22);
+            this.txtSifre.TabIndex = 1;
             // 
-            // label4
+            // txtKullaniciAdi
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 143);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 16);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Telefon";
-            this.label4.Click += new System.EventHandler(this.label3_Click);
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(402, 37);
+            this.txtKullaniciAdi.Name = "txtKullaniciAdi";
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(170, 22);
+            this.txtKullaniciAdi.TabIndex = 1;
             // 
-            // textBox2
+            // txtTelefon
             // 
-            this.textBox2.Location = new System.Drawing.Point(90, 70);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(170, 22);
-            this.textBox2.TabIndex = 1;
+            this.txtTelefon.Location = new System.Drawing.Point(90, 143);
+            this.txtTelefon.Name = "txtTelefon";
+            this.txtTelefon.Size = new System.Drawing.Size(170, 22);
+            this.txtTelefon.TabIndex = 1;
             // 
-            // textBox3
+            // txtEmail
             // 
-            this.textBox3.Location = new System.Drawing.Point(90, 109);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(170, 22);
-            this.textBox3.TabIndex = 1;
+            this.txtEmail.Location = new System.Drawing.Point(90, 109);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(170, 22);
+            this.txtEmail.TabIndex = 1;
             // 
-            // textBox4
+            // txtSoyadi
             // 
-            this.textBox4.Location = new System.Drawing.Point(90, 143);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(170, 22);
-            this.textBox4.TabIndex = 1;
+            this.txtSoyadi.Location = new System.Drawing.Point(90, 70);
+            this.txtSoyadi.Name = "txtSoyadi";
+            this.txtSoyadi.Size = new System.Drawing.Size(170, 22);
+            this.txtSoyadi.TabIndex = 1;
             // 
-            // label5
+            // label8
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(305, 37);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 16);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Kullanıcı Adı";
-            this.label5.Click += new System.EventHandler(this.label3_Click);
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(601, 43);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(87, 16);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Kullanıcı Rolu";
+            this.label8.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox5
+            // lblEklenmeTarihi
             // 
-            this.textBox5.Location = new System.Drawing.Point(402, 37);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(170, 22);
-            this.textBox5.TabIndex = 1;
+            this.lblEklenmeTarihi.AutoSize = true;
+            this.lblEklenmeTarihi.Location = new System.Drawing.Point(408, 115);
+            this.lblEklenmeTarihi.Name = "lblEklenmeTarihi";
+            this.lblEklenmeTarihi.Size = new System.Drawing.Size(14, 16);
+            this.lblEklenmeTarihi.TabIndex = 0;
+            this.lblEklenmeTarihi.Text = "0";
+            this.lblEklenmeTarihi.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(305, 115);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(97, 16);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Eklenme Tarihi";
+            this.label7.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // txtAdi
+            // 
+            this.txtAdi.Location = new System.Drawing.Point(90, 37);
+            this.txtAdi.Name = "txtAdi";
+            this.txtAdi.Size = new System.Drawing.Size(170, 22);
+            this.txtAdi.TabIndex = 1;
             // 
             // label6
             // 
@@ -192,100 +216,113 @@
             this.label6.Text = "Şifre";
             this.label6.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox6
+            // label5
             // 
-            this.textBox6.Location = new System.Drawing.Point(402, 76);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(170, 22);
-            this.textBox6.TabIndex = 1;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(305, 37);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(79, 16);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Kullanıcı Adı";
+            this.label5.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label7
+            // label4
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(305, 143);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 16);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Eklenme Tarihi";
-            this.label7.Click += new System.EventHandler(this.label3_Click);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(21, 143);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 16);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Telefon";
+            this.label4.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox7
+            // label3
             // 
-            this.textBox7.Location = new System.Drawing.Point(402, 143);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(170, 22);
-            this.textBox7.TabIndex = 1;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(21, 109);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 16);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Email";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // checkBox1
+            // label2
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(402, 109);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(71, 20);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "Aktif mi";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(21, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 16);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Soyadı";
             // 
-            // comboBoxEdit1
+            // label1
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(744, 37);
-            this.comboBoxEdit1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Size = new System.Drawing.Size(162, 22);
-            this.comboBoxEdit1.TabIndex = 3;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(21, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(27, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Adı";
             // 
-            // label8
+            // lblId
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(626, 40);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(87, 16);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Kullanıcı Rolu";
-            this.label8.Click += new System.EventHandler(this.label3_Click);
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(775, 18);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(14, 16);
+            this.lblId.TabIndex = 0;
+            this.lblId.Text = "0";
+            // 
+            // cmbKullaniciRolu
+            // 
+            this.cmbKullaniciRolu.FormattingEnabled = true;
+            this.cmbKullaniciRolu.Location = new System.Drawing.Point(604, 76);
+            this.cmbKullaniciRolu.Name = "cmbKullaniciRolu";
+            this.cmbKullaniciRolu.Size = new System.Drawing.Size(162, 24);
+            this.cmbKullaniciRolu.TabIndex = 5;
             // 
             // KullaniciYonetimi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(944, 450);
+            this.ClientSize = new System.Drawing.Size(819, 436);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvKullanicilar);
             this.Name = "KullaniciYonetimi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kullanici Yönetimi";
             this.Load += new System.EventHandler(this.KullaniciYonetimi_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKullanicilar)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvKullanicilar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtAdi;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.CheckBox cbAktif;
+        private System.Windows.Forms.TextBox txtSifre;
+        private System.Windows.Forms.TextBox txtKullaniciAdi;
+        private System.Windows.Forms.TextBox txtTelefon;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtSoyadi;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblEklenmeTarihi;
+        private System.Windows.Forms.Button btnSil;
+        private System.Windows.Forms.Button btnGuncelle;
+        private System.Windows.Forms.Button btnEkle;
+        private System.Windows.Forms.ComboBox cmbKullaniciRolu;
     }
 }

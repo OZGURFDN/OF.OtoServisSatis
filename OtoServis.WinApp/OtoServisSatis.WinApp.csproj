@@ -114,6 +114,10 @@
       <Project>{1f1e86b1-f47a-4fb6-ab4c-c30653b9e9ed}</Project>
       <Name>OtoServisSati.BL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OtoServisSatis.DAL\OtoServisSatis.DAL.csproj">
+      <Project>{D86A9D60-B364-402C-8D0D-5E1DF8D15C12}</Project>
+      <Name>OtoServisSatis.DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OtoServisSatis.Entities\OtoServisSatis.Entities.csproj">
       <Project>{F13B9214-1D79-4DA9-B37F-FF8D1525CFD7}</Project>
       <Name>OtoServisSatis.Entities</Name>
