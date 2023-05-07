@@ -58,6 +58,7 @@
             // dgvKullanicilar
             // 
             this.dgvKullanicilar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvKullanicilar.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvKullanicilar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKullanicilar.Location = new System.Drawing.Point(-32, 5);
             this.dgvKullanicilar.Name = "dgvKullanicilar";
@@ -65,6 +66,7 @@
             this.dgvKullanicilar.RowTemplate.Height = 24;
             this.dgvKullanicilar.Size = new System.Drawing.Size(930, 198);
             this.dgvKullanicilar.TabIndex = 0;
+            this.dgvKullanicilar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKullanicilar_CellClick);
             // 
             // groupBox1
             // 
@@ -114,15 +116,17 @@
             this.btnSil.TabIndex = 4;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnGuncelle
             // 
-            this.btnGuncelle.Location = new System.Drawing.Point(327, 186);
+            this.btnGuncelle.Location = new System.Drawing.Point(314, 186);
             this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(75, 23);
+            this.btnGuncelle.Size = new System.Drawing.Size(108, 23);
             this.btnGuncelle.TabIndex = 4;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnEkle
             // 
@@ -192,7 +196,7 @@
             // lblEklenmeTarihi
             // 
             this.lblEklenmeTarihi.AutoSize = true;
-            this.lblEklenmeTarihi.Location = new System.Drawing.Point(408, 115);
+            this.lblEklenmeTarihi.Location = new System.Drawing.Point(601, 171);
             this.lblEklenmeTarihi.Name = "lblEklenmeTarihi";
             this.lblEklenmeTarihi.Size = new System.Drawing.Size(14, 16);
             this.lblEklenmeTarihi.TabIndex = 0;
@@ -202,7 +206,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(305, 115);
+            this.label7.Location = new System.Drawing.Point(601, 146);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(97, 16);
             this.label7.TabIndex = 0;
