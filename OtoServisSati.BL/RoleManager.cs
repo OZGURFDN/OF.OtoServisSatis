@@ -1,4 +1,4 @@
-﻿using OtoServisSatis.DAL.Repositories;
+﻿using OtoServisSatis.BL.Repositories;
 using OtoServisSatis.Entities;
 
 namespace OtoServisSati.BL

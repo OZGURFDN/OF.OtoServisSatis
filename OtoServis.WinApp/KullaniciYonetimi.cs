@@ -12,10 +12,11 @@ namespace OtoServis.WinApp
             InitializeComponent();
         }
         KullaniciManager manager = new KullaniciManager();
-
+        RoleManager roleManager =new RoleManager();
         void Yukle()
         {
             dgvKullanicilar.DataSource = manager.GetAll();
+            cmbKullaniciRolu.DataSource= manager.GetAll();
         }
         private void KullaniciYonetimi_Load(object sender, System.EventArgs e)
         {

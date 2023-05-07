@@ -275,11 +275,13 @@
             // 
             // cmbKullaniciRolu
             // 
+            this.cmbKullaniciRolu.DisplayMember = "Adi";
             this.cmbKullaniciRolu.FormattingEnabled = true;
             this.cmbKullaniciRolu.Location = new System.Drawing.Point(604, 76);
             this.cmbKullaniciRolu.Name = "cmbKullaniciRolu";
             this.cmbKullaniciRolu.Size = new System.Drawing.Size(162, 24);
             this.cmbKullaniciRolu.TabIndex = 5;
+            this.cmbKullaniciRolu.ValueMember = "Id";
             // 
             // KullaniciYonetimi
             // 

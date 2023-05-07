@@ -47,6 +47,8 @@
     <Compile Include="KullaniciManager.cs" />
     <Compile Include="MarkaManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IRepsitory.cs" />
+    <Compile Include="Repositories\Repository.cs" />
     <Compile Include="RoleManager.cs" />
   </ItemGroup>
   <ItemGroup>

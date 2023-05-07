@@ -5,8 +5,9 @@ using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Linq.Expressions;
+using OtoServisSatis.DAL;
 
-namespace OtoServisSatis.DAL.Repositories
+namespace OtoServisSatis.BL.Repositories
 {
     public class Repository<T> : IRepsitory<T> where T : class, IEntity, new()
     {

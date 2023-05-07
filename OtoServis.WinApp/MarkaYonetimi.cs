@@ -55,7 +55,7 @@ namespace OtoServis.WinApp
                     MessageBox.Show("Marka Eklendi");
                 }
             }
-            catch (Exception exception)
+            catch (Exception)
             {
                 MessageBox.Show("Hata Oluştu. Kayıt Eklenemedi.");
             }
@@ -85,7 +85,7 @@ namespace OtoServis.WinApp
                 else MessageBox.Show("Listeden Güncellemek İstediğniz Kaydı Seçiniz.");
 
             }
-            catch (Exception exception)
+            catch (Exception)
             {
                 MessageBox.Show("Marka Güncellenemedi.");
             }
@@ -110,7 +110,7 @@ namespace OtoServis.WinApp
                 else MessageBox.Show("Listeden Silmek İstediğiniz Kaydı Seçiniz.");
 
             }
-            catch (Exception exception)
+            catch (Exception)
             {
                 MessageBox.Show("Marka Silinemedi.");
             }

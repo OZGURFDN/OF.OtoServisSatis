@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace OtoServisSatis.DAL.Repositories
+namespace OtoServisSatis.BL.Repositories
 {
     public interface IRepsitory<T>
     {
