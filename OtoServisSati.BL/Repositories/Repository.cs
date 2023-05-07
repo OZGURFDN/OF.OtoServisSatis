@@ -32,6 +32,9 @@ namespace OtoServisSatis.BL.Repositories
             dbset.Remove(Find(id));
             return Save();
         }
+
+
+
         public T Find(int id)
         {
             return dbset.Find(id);
@@ -49,7 +52,10 @@ namespace OtoServisSatis.BL.Repositories
         {
             return dbset.Where(expression).ToList();
         }
-
+        public IQueryable<T> GetAllByInclude(string table)
+        {
+            return dbset.Include(table);
+        }
         public int Update(T entity)
         {
             dbset.AddOrUpdate(entity);

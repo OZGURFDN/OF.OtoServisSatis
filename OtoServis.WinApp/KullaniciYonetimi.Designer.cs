@@ -30,6 +30,7 @@
         {
             this.dgvKullanicilar = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbKullaniciRolu = new System.Windows.Forms.ComboBox();
             this.btnSil = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.btnEkle = new System.Windows.Forms.Button();
@@ -50,7 +51,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
-            this.cmbKullaniciRolu = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKullanicilar)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -59,11 +59,11 @@
             // 
             this.dgvKullanicilar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvKullanicilar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKullanicilar.Location = new System.Drawing.Point(3, 4);
+            this.dgvKullanicilar.Location = new System.Drawing.Point(-32, 5);
             this.dgvKullanicilar.Name = "dgvKullanicilar";
             this.dgvKullanicilar.RowHeadersWidth = 51;
             this.dgvKullanicilar.RowTemplate.Height = 24;
-            this.dgvKullanicilar.Size = new System.Drawing.Size(810, 198);
+            this.dgvKullanicilar.Size = new System.Drawing.Size(930, 198);
             this.dgvKullanicilar.TabIndex = 0;
             // 
             // groupBox1
@@ -91,10 +91,20 @@
             this.groupBox1.Controls.Add(this.lblId);
             this.groupBox1.Location = new System.Drawing.Point(3, 209);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(810, 225);
+            this.groupBox1.Size = new System.Drawing.Size(895, 225);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kullanıcı Bilgileri";
+            // 
+            // cmbKullaniciRolu
+            // 
+            this.cmbKullaniciRolu.DisplayMember = "Adi";
+            this.cmbKullaniciRolu.FormattingEnabled = true;
+            this.cmbKullaniciRolu.Location = new System.Drawing.Point(604, 76);
+            this.cmbKullaniciRolu.Name = "cmbKullaniciRolu";
+            this.cmbKullaniciRolu.Size = new System.Drawing.Size(162, 24);
+            this.cmbKullaniciRolu.TabIndex = 5;
+            this.cmbKullaniciRolu.ValueMember = "Id";
             // 
             // btnSil
             // 
@@ -267,27 +277,17 @@
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(775, 18);
+            this.lblId.Location = new System.Drawing.Point(875, 18);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(14, 16);
             this.lblId.TabIndex = 0;
             this.lblId.Text = "0";
             // 
-            // cmbKullaniciRolu
-            // 
-            this.cmbKullaniciRolu.DisplayMember = "Adi";
-            this.cmbKullaniciRolu.FormattingEnabled = true;
-            this.cmbKullaniciRolu.Location = new System.Drawing.Point(604, 76);
-            this.cmbKullaniciRolu.Name = "cmbKullaniciRolu";
-            this.cmbKullaniciRolu.Size = new System.Drawing.Size(162, 24);
-            this.cmbKullaniciRolu.TabIndex = 5;
-            this.cmbKullaniciRolu.ValueMember = "Id";
-            // 
             // KullaniciYonetimi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(819, 436);
+            this.ClientSize = new System.Drawing.Size(910, 436);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvKullanicilar);
             this.Name = "KullaniciYonetimi";

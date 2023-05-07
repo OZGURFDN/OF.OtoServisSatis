@@ -1,6 +1,7 @@
 ﻿using OtoServisSati.BL;
 using OtoServisSatis.Entities;
 using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace OtoServis.WinApp
@@ -15,8 +16,26 @@ namespace OtoServis.WinApp
         RoleManager roleManager =new RoleManager();
         void Yukle()
         {
-            dgvKullanicilar.DataSource = manager.GetAll();
-            cmbKullaniciRolu.DataSource= manager.GetAll();
+
+            var ozelSorgu=(from k in manager.GetAllByInclude("Rol")
+                select new
+                {
+                    Id=k.Id,
+                    Adı=k.Adi,
+                    Soyadı=k.Soyadi,
+                    Email=k.Email,
+                    Telefon=k.Telefon,
+                    Kullanıcı_Adı=k.KullaniciAdi,
+                    Durum=k.Aktifmi,
+                    Eklenme_Tarihi=k.EklenmeTarihi,
+                    Rolü=k.Rol.Adi
+
+                }).ToList();
+         //   dgvKullanicilar.DataSource = manager.GetAll();
+            cmbKullaniciRolu.DataSource= roleManager.GetAll();
+
+              dgvKullanicilar.DataSource = ozelSorgu;
+            // cmbKullaniciRolu.DataSource= manager.GetAll();
         }
         private void KullaniciYonetimi_Load(object sender, System.EventArgs e)
         {
