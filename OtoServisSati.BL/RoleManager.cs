@@ -5,6 +5,6 @@ namespace OtoServisSati.BL
 {
     public class RoleManager : Repository<Rol>
     {
-
+       
     }
 }
