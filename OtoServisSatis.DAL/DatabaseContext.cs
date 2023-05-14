@@ -45,6 +45,12 @@ namespace OtoServisSatis.DAL
         {
             Database.SetInitializer(new DatabaseInitializer());
         }
+
+        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        //{
+        //    Database.SetInitializer<DatabaseContext>(null);
+        //    base.OnModelCreating(modelBuilder);
+        //}
     }
 
 }
