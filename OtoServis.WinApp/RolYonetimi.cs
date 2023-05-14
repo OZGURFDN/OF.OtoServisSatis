@@ -58,9 +58,67 @@ namespace OtoServis.WinApp
                 lblId.Text = dgvRoller.CurrentRow.Cells[0].Value.ToString();
                 txtRolAdi.Text = dgvRoller.CurrentRow.Cells[1].Value.ToString();
             }
-            catch (Exception exception)
+            catch (Exception)
             {
                 MessageBox.Show("Hata Oluştu Kayıt Atanamadı.");
+            }
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (lblId.Text == "0")
+                {
+                    MessageBox.Show("Listeden Güncellenecek Kaydı Seçiniz.");
+                }
+                else
+                {
+                    int rolId = Convert.ToInt32(dgvRoller.CurrentRow.Cells[0].Value);
+
+                    var sonuc = manager.Update(
+                        new Rol
+                        {
+                            Id = rolId,
+                            Adi = txtRolAdi.Text
+                        });
+                    if (sonuc > 0)
+                    {
+                        Temizle();
+                        Yukle();
+                        MessageBox.Show("Kayıt Güncellendi.");
+                    }
+                }
+                
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Hata Oluştu Kayıt Güncellenemedi.");
+            }
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (lblId.Text == "0")
+                {
+                    MessageBox.Show("Listeden Silinecek Kaydı Seçiniz.");
+                }
+                else
+                {
+                    var sonuc = manager.Delete(Convert.ToInt32(lblId.Text));
+                    if (sonuc > 0)
+                    {
+                        Temizle();
+                        Yukle();
+                        MessageBox.Show("Kayıt Silindi.");
+                    }
+                }
+            }
+            catch (Exception )
+            {
+                MessageBox.Show("Hata Oluştu Kayıt Silinemedi.");
             }
         }
     }

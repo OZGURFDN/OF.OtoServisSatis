@@ -76,6 +76,7 @@
             this.btnSil.Size = new System.Drawing.Size(94, 29);
             this.btnSil.TabIndex = 2;
             this.btnSil.Text = "Sil";
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnGuncelle
             // 
@@ -85,6 +86,7 @@
             this.btnGuncelle.Size = new System.Drawing.Size(94, 29);
             this.btnGuncelle.TabIndex = 2;
             this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnEkle
             // 
