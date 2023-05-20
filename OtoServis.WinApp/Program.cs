@@ -13,7 +13,7 @@ namespace OtoServis.WinApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AracYonetimi());
+            Application.Run(new MusteriYonetimi());
         }
     }
 }
