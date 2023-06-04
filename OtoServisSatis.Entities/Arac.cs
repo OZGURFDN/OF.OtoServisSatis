@@ -12,5 +12,6 @@
         public bool Satistami { get; set; }
         public string Notlar { get; set; }
         public virtual  Marka Marka { get; set; }
+        
     }
 }

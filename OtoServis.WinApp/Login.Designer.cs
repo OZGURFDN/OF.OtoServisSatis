@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             this.grpKuallnici = new System.Windows.Forms.GroupBox();
+            this.btnCikis = new System.Windows.Forms.Button();
+            this.btnGiris = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.txtKullaniciadi = new System.Windows.Forms.TextBox();
-            this.btnCikis = new System.Windows.Forms.Button();
-            this.btnGiris = new System.Windows.Forms.Button();
+            this.timer1 = new System.Timers.Timer();
             this.grpKuallnici.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.timer1)).BeginInit();
             this.SuspendLayout();
             // 
             // grpKuallnici
@@ -52,39 +54,6 @@
             this.grpKuallnici.TabIndex = 3;
             this.grpKuallnici.TabStop = false;
             this.grpKuallnici.Text = "Kullanıcı Bilgileri";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 74);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 16);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Şifre";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 16);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Kullanıcı Adı";
-            // 
-            // txtSifre
-            // 
-            this.txtSifre.Location = new System.Drawing.Point(132, 74);
-            this.txtSifre.Name = "txtSifre";
-            this.txtSifre.PasswordChar = '*';
-            this.txtSifre.Size = new System.Drawing.Size(168, 22);
-            this.txtSifre.TabIndex = 2;
-            // 
-            // txtKullaniciadi
-            // 
-            this.txtKullaniciadi.Location = new System.Drawing.Point(134, 46);
-            this.txtKullaniciadi.Name = "txtKullaniciadi";
-            this.txtKullaniciadi.Size = new System.Drawing.Size(168, 22);
-            this.txtKullaniciadi.TabIndex = 3;
             // 
             // btnCikis
             // 
@@ -106,6 +75,44 @@
             this.btnGiris.UseVisualStyleBackColor = true;
             this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 74);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 16);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Şifre";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 16);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Kullanıcı Adı";
+            // 
+            // txtSifre
+            // 
+            this.txtSifre.Location = new System.Drawing.Point(132, 74);
+            this.txtSifre.Name = "txtSifre";
+            this.txtSifre.PasswordChar = '*';
+            this.txtSifre.Size = new System.Drawing.Size(168, 22);
+            this.txtSifre.TabIndex = 2;
+            // 
+            // txtKullaniciadi
+            // 
+            this.txtKullaniciadi.Location = new System.Drawing.Point(134, 46);
+            this.txtKullaniciadi.Name = "txtKullaniciadi";
+            this.txtKullaniciadi.Size = new System.Drawing.Size(168, 22);
+            this.txtKullaniciadi.TabIndex = 3;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.SynchronizingObject = this;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -120,9 +127,11 @@
             this.Text = "Login";
             this.grpKuallnici.ResumeLayout(false);
             this.grpKuallnici.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.timer1)).EndInit();
             this.ResumeLayout(false);
-
         }
+
+        private System.Timers.Timer timer1;
 
         #endregion
 
